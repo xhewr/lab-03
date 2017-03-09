@@ -48,7 +48,7 @@ public:
 	void showStaticBinding();
 
 	// Redefined function from base class to display object's values (virtual)
-	void showValues() override;
+	virtual void showValues() override;
 
 
 };

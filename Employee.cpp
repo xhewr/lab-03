@@ -60,9 +60,9 @@ string Employee::getHireDate()
 
 int Employee::getData()
 {
-	cout << "Name: " << getName() << endl;
-	cout << "ID: " << getID() << endl;
-	cout << "Hired: " << getHireDate() << endl;
+	cout << "Name:  " << getName() << endl;
+   	cout << "ID:    " << getID() << endl;
+   	cout << "Hired: " << getHireDate() << endl;
 	return 0;
 }
 
@@ -74,8 +74,8 @@ int Employee::getData()
 void Employee::showStaticBinding()
 {
 	cout << "showStaticBinding() function of the Employee Class ...\n";
-	cout << "this function demostrates a redefined function \n";
-	cout << "this is the base class message \n";
+	cout << "This function demostrates a redefined function \n";
+	cout << "This is the base class message \n";
 }
 
 

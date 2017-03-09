@@ -25,10 +25,7 @@ public:
 		hourPayRate = 0.0;
 	}
 
-	// Constructor overload 1, calling only Employee base class constructor overload 1
-	//ProductionWorker(string n, int ID, string date) : Employee(n, ID, date) {}  // clifford - this is not needed in my opinion.  we don't need two overloaded constructors.
-																				  //  plus this function isn't used in the program
-
+														 
 	// overloaded constructor, calling Employee base class constructor and adding two new data members
 	ProductionWorker(string n, int ID, string date, int s, double r) : Employee(n, ID, date)
 	{
@@ -47,7 +44,10 @@ public:
 	int getData();
 
 	// Redefined function from base class (virtual)
-	virtual void showValues();  //  clifford - I removed the overide here for testing.  If you want you can add it back in, but the program works with out override
+	void showValues() override;  //  clifford - I removed the overide here for testing.  If you want you can add it back in, but the program works with out override
+				    // Fabi - override is like a safety key, not needed but recommended: http://en.cppreference.com/w/cpp/language/override
+				    // and the virtual declaration only needs to be made once in the base class 
+				    // I deleted the virtual keyword and put the override back
 };
 
 #endif 

@@ -6,7 +6,13 @@
 using namespace std;
 
 
-//Employee base class:
+// Employee base class:
+// Has a default constructor to set data members to zero or blank
+// An Overloaded constructor to set data members to passed values
+// Setter functions to manipulate the individual members
+// Getter functions to return individual member data
+// getDate function to display all the member data
+// showValues function to demostrate polymorhism
 
 class Employee
 {
@@ -19,7 +25,7 @@ public:
 	// Default constructor
 	Employee();
 
-	// overloaded constructor
+	// Overloaded constructor
 	Employee(string, int, string);
 
 	// Setter functions

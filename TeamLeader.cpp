@@ -1,6 +1,7 @@
 #include "TEAMLEADER.H"
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 //Definition of TeamLeader class functions
@@ -45,7 +46,7 @@ int TeamLeader::getAttendedTrainingHrs()
 int TeamLeader::getData()
 {
 	ProductionWorker::getData();
-	cout << "Monthly bonus: " << getBonusMonth() << endl;
+	cout << "Monthly bonus:   $" << fixed << showpoint << setprecision(2) << getBonusMonth() << endl;
 	cout << "Required training hours: " << getRequiredTrainingHrs() << endl;
 	cout << "Attended training hours: " << getAttendedTrainingHrs() << endl;
 	return 0;
@@ -58,8 +59,8 @@ int TeamLeader::getData()
 void TeamLeader::showStaticBinding()
 {
 	cout << "showStaticBinding() function of the TeamLeader Class ...\n";
-	cout << "this function demostrates a redefined function \n";
-	cout << "this is the TeamLeader class message \n";
+	cout << "This function demostrates a redefined function \n";
+	cout << "This is the TeamLeader class message \n";
 }
 
 

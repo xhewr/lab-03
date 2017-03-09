@@ -6,7 +6,10 @@
 #include <string>
 using namespace std;
 
-//TeamLeader derived class, inheriting from ProductionWorker class:
+// TeamLeader derived class, inheriting from ProductionWorker class:
+// Inherits ProductionWorker data and member functions, which in turn inherits Employee class data and member functions
+// showStaticBinding() function redefines the ProductionWorker class showStaticBinding() and displays a new message
+// showValues function overrides the base class showVaules() function when used with a polymorphic call
 
 class TeamLeader : public ProductionWorker
 {
@@ -26,7 +29,7 @@ public:
 	}
 
 
-	// Constructor overload 2, calling ProductionWorker constructor overload 2 + new attributes
+	// Overloaded constructor, calling ProductionWorker's overloaded constructor and three new attributes
 	TeamLeader(string n, int ID, string date, int s, double r, double bm, int rh, int ah) : ProductionWorker(n, ID, date, s, r)
 	{
 		bonusMonth = bm;
@@ -47,7 +50,7 @@ public:
 	int getData();
 	void showStaticBinding();
 
-	// Redefined function from base class to display object's values (virtual)
+	// This function will override the base class showValues() function
 	virtual void showValues() override;
 
 

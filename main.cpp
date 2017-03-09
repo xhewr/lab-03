@@ -42,7 +42,7 @@ int main()
 
 
 	// Calling redefined functions / static binding
-	cout << "demostrating redefined fuctions with showStaticBinding() function ... \n\n";
+	cout << "Demostrating redefined fuctions with showStaticBinding() function ... \n\n";
 	man0.showStaticBinding();
 	cout << endl;
 	man1.showStaticBinding();
@@ -63,7 +63,7 @@ int main()
 	// Calling overriden functions / dynamic binding
 	cout << endl;
 	cout << endl;
-	cout << "demostrating polymorphism with displayInfo() function ...\n\n";
+	cout << "Demostrating polymorphism with displayInfo() function ...\n\n";
 	displayInfo(empClassPtr);
 	cout << endl;
 	displayInfo(workerClassPtr);

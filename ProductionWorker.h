@@ -7,8 +7,11 @@
 using namespace std;
 
 
+// Production Worker derived class, inheriting from Employee base class:
+// Inherits Employee data and member functions and has two extra data member for shift and pay rate
+// showStaticBinding() function redefines the base class showStaticBinding() and displays a new message
+// showValues function overrides the base class showVaules() function when used with a polymorphic call
 
-//Production Worker derived class, inheriting from Employee base class:
 
 class ProductionWorker : public Employee
 {
@@ -25,8 +28,8 @@ public:
 		hourPayRate = 0.0;
 	}
 
-														 
-	// overloaded constructor, calling Employee base class constructor and adding two new data members
+
+	// Overloaded constructor, calling Employee base class's overloaded constructor and adding two new data members
 	ProductionWorker(string n, int ID, string date, int s, double r) : Employee(n, ID, date)
 	{
 		shift = s;
@@ -43,10 +46,8 @@ public:
 	double getHourPayRate();
 	int getData();
 
-	// Redefined function from base class (virtual)
-	virtual void showValues() override;  //  clifford - I removed the overide here for testing.  If you want you can add it back in, but the program works with out override
-				    // Fabi - override is like a safety key, not needed but recommended: http://en.cppreference.com/w/cpp/language/override
-				    // put the override back 
+	// This function will override the base class showValues() function
+	virtual void showValues() override; 
 };
 
 #endif 

@@ -4,7 +4,9 @@
 #include <iomanip>
 using namespace std;
 
-//Definition of ProductionWorker class functions
+// Definition of ProductionWorker class functions
+// showStaticBinding() function redefines the base class showStaticBinding() and displays a new message
+// showValues function overrides the base class showVaules() function when used with a polymorphic call
 
 // Setter function to set employee's shift
 void ProductionWorker::setShift(int s)
@@ -38,10 +40,6 @@ int ProductionWorker::getData()
 	return 0;
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 void ProductionWorker::showStaticBinding()
 {
 	cout << "showStaticBinding() function of the ProductionWorker Class ...\n";
@@ -49,12 +47,11 @@ void ProductionWorker::showStaticBinding()
 	cout << "This is the ProductionWorker class message \n";
 }
 
-
-// Redefined function from base class to display the object's values (virtual)
+// This function will override the base class showValues() function when called using dynamic binding
 void ProductionWorker::showValues()
 {
 	cout << "ProductionWorker class showValues() virtual function: " << endl;
 	getData();
-	
+
 
 }

@@ -1,6 +1,7 @@
 #include "PRODUCTIONWORKER.H"
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 //Definition of ProductionWorker class functions
@@ -33,7 +34,7 @@ int ProductionWorker::getData()
 {
 	Employee::getData();       // display attributes defined in the base class
 	cout << "Shift: " << getShift() << endl;
-	cout << "Hourly Pay rate: " << getHourPayRate() << endl;
+	cout << "Hourly Pay rate: $" << fixed << showpoint << setprecision(2) << getHourPayRate() << endl;
 	return 0;
 }
 
@@ -44,8 +45,8 @@ int ProductionWorker::getData()
 void ProductionWorker::showStaticBinding()
 {
 	cout << "showStaticBinding() function of the ProductionWorker Class ...\n";
-	cout << "this function demostrates a redefined function \n";
-	cout << "this is the ProductionWorker class message \n";
+	cout << "This function demostrates a redefined function \n";
+	cout << "This is the ProductionWorker class message \n";
 }
 
 
@@ -53,8 +54,7 @@ void ProductionWorker::showStaticBinding()
 void ProductionWorker::showValues()
 {
 	cout << "ProductionWorker class showValues() virtual function: " << endl;
-	Employee::getData();
-	cout << "Shift: " << getShift() << endl;
-	cout << "Hourly Pay rate: " << getHourPayRate() << endl;
+	getData();
+	
 
 }

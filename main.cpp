@@ -7,11 +7,11 @@ Program Description: This program stores data for different types of employees.
 Values can be set during instatiation, modified individualy, accessed and displayed.
 
 Pseudocode:
-Objects of the class Employee, ProductionWorker, ShiftSupervisor 
+Objects of the class Employee, ProductionWorker, ShiftSupervisor
 and TeamLeader can have their values set during instatiation.
-Individual setter functions can be used to set values individually 
+Individual setter functions can be used to set values individually
 or modify specific values of the classes' member variables.
-Functions are redefined among the classes and can be called 
+Functions are redefined among the classes and can be called
 directly by each class instance.
 A polymorphic function displays information from instances of all
 the casses, which is called dinamically through a pointer
@@ -50,11 +50,10 @@ int main()
 	man2.showStaticBinding();
 	cout << endl;
 	man3.showStaticBinding();
-	
 
 
-	//  clifford - this is needed, so say-eth the teacher
-	// Fabi - thanks for taking the time to ask him :)
+
+	// Creating employee class pointers that point the address of the 4 man objects
 	Employee *empClassPtr = &man0;
 	Employee *workerClassPtr = &man1;
 	Employee *ShiftSupervisorClassPtr = &man2;
@@ -70,7 +69,7 @@ int main()
 	cout << endl;
 	displayInfo(ShiftSupervisorClassPtr);
 	cout << endl;
-	
+
 	displayInfo(TeamLeaderClassPtr);
 	cout << endl;
 

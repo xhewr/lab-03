@@ -1,6 +1,7 @@
-#include "SHIFTSUPERVISOR.H"
+#include "ShiftSupervisor.h"
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 //Definition of ShiftSupervisor class functions
@@ -33,8 +34,8 @@ double ShiftSupervisor::getBonusYear()
 int ShiftSupervisor::getData()
 {
 	Employee::getData();
-	cout << "Annual Salary: " << getSalaryYear() << endl;
-	cout << "Annual Bonus: " << getBonusYear() << endl;
+	cout << "Annual Salary: $" << fixed << showpoint << setprecision(2) << getSalaryYear() << endl;
+	cout << "Annual Bonus:  $" << fixed << showpoint << setprecision(2) <<  getBonusYear() << endl;
 	return 0;
 }
 
@@ -45,8 +46,8 @@ int ShiftSupervisor::getData()
 void ShiftSupervisor::showStaticBinding()
 {
 	cout << "showStaticBinding() function of the ShiftSupervisor Class ...\n";
-	cout << "this function demostrates a redefined function \n";
-	cout << "this is the ShiftSupervisor class message \n";
+	cout << "This function demostrates a redefined function \n";
+	cout << "This is the ShiftSupervisor class message \n";
 }
 
 
@@ -54,7 +55,6 @@ void ShiftSupervisor::showStaticBinding()
 void ShiftSupervisor::showValues()
 {
 	cout << "ShiftSupervisor class showValues() virtual function: " << endl;
-	Employee::getData();
-	cout << "Annual Salary: " << getSalaryYear() << endl;
-	cout << "Annual Bonus: " << getBonusYear() << endl;
+	getData();
+	
 }

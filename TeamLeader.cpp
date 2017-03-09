@@ -4,8 +4,9 @@
 #include <iomanip>
 using namespace std;
 
-//Definition of TeamLeader class functions
-
+// Definition of TeamLeader class functions
+// showStaticBinding() function redefines the ProductionWorker class showStaticBinding() and displays a new message
+// showValues function overrides the base class showVaules() function when used with a polymorphic call
 
 // Setter function to set employee's monthly bonus
 void TeamLeader::setBonusMonth(double bm)
@@ -53,9 +54,6 @@ int TeamLeader::getData()
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 void TeamLeader::showStaticBinding()
 {
 	cout << "showStaticBinding() function of the TeamLeader Class ...\n";
@@ -64,7 +62,7 @@ void TeamLeader::showStaticBinding()
 }
 
 
-// Redefined base function to dinamically display all the values of the object (virtual)
+// This function will override the base class showValues() function when called using dynamic binding
 void TeamLeader::showValues()
 {
 	cout << "TeamLeader class showValues() virtual function: " << endl;

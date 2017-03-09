@@ -1,7 +1,23 @@
-//  22b
-//
-//
+// CIS22b
+// Lab 03
+// Name:
 
+/*
+Program Description: This program stores data for different types of employees.
+Values can be set during instatiation, modified individualy, accessed and displayed.
+
+Pseudocode:
+Objects of the class Employee, ProductionWorker, ShiftSupervisor 
+and TeamLeader can have their values set during instatiation.
+Individual setter functions can be used to set values individually 
+or modify specific values of the classes' member variables.
+Functions are redefined among the classes and can be called 
+directly by each class instance.
+A polymorphic function displays information from instances of all
+the casses, which is called dinamically through a pointer
+of the desired instance.
+Output of the getter functions is displayed on the console
+*/
 #include "Employee.h"
 #include "ProductionWorker.h"
 #include "ShiftSupervisor.h"
@@ -34,48 +50,42 @@ int main()
 	man2.showStaticBinding();
 	cout << endl;
 	man3.showStaticBinding();
-	//cout << "Results: " << endl;
-	//cout << "\nProduction Worker \n" << man1.getData() << endl;
-	//cout << "\nShift Supervisor \n" << man2.getData() << endl;
-	//cout << "\nTeam Leader \n" << man3.getData() << endl;
+	
 
 
 	//  clifford - this is needed, so say-eth the teacher
+	// Fabi - thanks for taking the time to ask him :)
 	Employee *empClassPtr = &man0;
 	Employee *workerClassPtr = &man1;
 	Employee *ShiftSupervisorClassPtr = &man2;
 	Employee *TeamLeaderClassPtr = &man3;
 
 	// Calling overriden functions / dynamic binding
-	//cout << endl;
 	cout << endl;
 	cout << endl;
 	cout << "demostrating polymorphism with displayInfo() function ...\n\n";
 	displayInfo(empClassPtr);
 	cout << endl;
-	//cout << "\nVirtual: \n" << displayInfo(man1);
 	displayInfo(workerClassPtr);
 	cout << endl;
-	//cout << "\nVirtual: \n" << displayInfo(man2);
 	displayInfo(ShiftSupervisorClassPtr);
 	cout << endl;
-	//cout << "\nVirtual: \n" << displayInfo(man3);
+	
 	displayInfo(TeamLeaderClassPtr);
 	cout << endl;
 
 
-	cin.get();
+	system("pause");
 	return 0;
 }
 
 
 
-// Polymorphic function
-// Receives an object fro any of the defined classes as a reference
+// Polymorphic function to display employee information:
+// Receives a pointer to an object from any of the defined classes
 // Calls the virtual function defined in the base class
 // Displays all the current set values of the passed object
 void displayInfo(Employee *employeeClassPtr)
 {
 	employeeClassPtr->showValues();
-	//return 0;
 }

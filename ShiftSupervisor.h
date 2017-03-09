@@ -25,10 +25,7 @@ public:
 		bonusYear = 0.0;
 	}
 
-	// Constructor overload 1, calling Employee base class constructor overload 1
-	//ShiftSupervisor(string n, int ID, string date) : Employee(n, ID, date){}  // clifford - this is not needed in my opinion.  we don't need two overloaded constructors.
-																				//  plus this function isn't used in the program
-
+												
 	// Constructor overload 2, calling Employee base class constructor overload 1 + new attributes
 	ShiftSupervisor(string n, int id, string date, double sy, double by) : Employee(n, id, date)
 	{
@@ -47,7 +44,7 @@ public:
 	void showStaticBinding();
 
 	// Redefined function from base class to display obeject's values (virtual)
-	virtual void showValues() override;
+	void showValues() override; //Fabi - virtual declaration only needed once in base class
 
 
 };

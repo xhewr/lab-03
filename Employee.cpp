@@ -3,7 +3,14 @@
 #include <string>
 using namespace std;
 
-//Definition of Employee class functions
+// Definition of Employee class functions
+// Has a default constructor to set data members to zero or blank
+// An Overloaded constructor to set data members to passed values
+// Setter functions to manipulate the individual members
+// Getter functions to return individual member data
+// getData function to display all the member data
+// showStaticBinding function to demostrate redifined functions
+// showValues function to demostrate polymorhism
 
 // Default constructor
 Employee::Employee()
@@ -13,7 +20,7 @@ Employee::Employee()
 	hireDate = "";
 }
 
-// Over loaded constructor
+// Overloaded constructor
 Employee::Employee(string n, int id, string date)
 {
 	name = n;
@@ -61,15 +68,11 @@ string Employee::getHireDate()
 int Employee::getData()
 {
 	cout << "Name:  " << getName() << endl;
-   	cout << "ID:    " << getID() << endl;
-   	cout << "Hired: " << getHireDate() << endl;
+	cout << "ID:    " << getID() << endl;
+	cout << "Hired: " << getHireDate() << endl;
 	return 0;
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 // static binding fuction
 void Employee::showStaticBinding()
 {
@@ -78,8 +81,7 @@ void Employee::showStaticBinding()
 	cout << "This is the base class message \n";
 }
 
-
-// Definition for virtual function to dinamically display all the values of the object
+// Definition for virtual function to dynamically display all the values of the object
 void Employee::showValues()
 {
 	cout << "Employee class showValues() virtual function: " << endl;

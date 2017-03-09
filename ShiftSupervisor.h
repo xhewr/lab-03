@@ -44,7 +44,7 @@ public:
 	void showStaticBinding();
 
 	// Redefined function from base class to display obeject's values (virtual)
-	void showValues() override; //Fabi - virtual declaration only needed once in base class
+	virtual void showValues() override;
 
 
 };

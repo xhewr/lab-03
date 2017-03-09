@@ -44,10 +44,9 @@ public:
 	int getData();
 
 	// Redefined function from base class (virtual)
-	void showValues() override;  //  clifford - I removed the overide here for testing.  If you want you can add it back in, but the program works with out override
+	virtual void showValues() override;  //  clifford - I removed the overide here for testing.  If you want you can add it back in, but the program works with out override
 				    // Fabi - override is like a safety key, not needed but recommended: http://en.cppreference.com/w/cpp/language/override
-				    // and the virtual declaration only needs to be made once in the base class 
-				    // I deleted the virtual keyword and put the override back
+				    // put the override back 
 };
 
 #endif 

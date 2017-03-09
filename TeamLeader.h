@@ -25,9 +25,6 @@ public:
 		attendedTrainingHrs = 0;
 	}
 
-	// Constructor overload 1, calling ProductionWorker constructor overload 1
-	//TeamLeader(string n, int ID, string date) : ProductionWorker(n, ID, date){}  // clifford - this is not needed in my opinion.  we don't need two overloaded constructors.
-																				   //  plus this function isn't used in the program
 
 	// Constructor overload 2, calling ProductionWorker constructor overload 2 + new attributes
 	TeamLeader(string n, int ID, string date, int s, double r, double bm, int rh, int ah) : ProductionWorker(n, ID, date, s, r)
@@ -51,7 +48,7 @@ public:
 	void showStaticBinding();
 
 	// Redefined function from base class to display object's values (virtual)
-	virtual void showValues() override;
+	void showValues() override;
 
 
 };

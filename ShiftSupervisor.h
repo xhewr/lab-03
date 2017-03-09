@@ -8,7 +8,10 @@ using namespace std;
 
 
 
-//ShiftSupervisor derived class, inheriting from Employee base class:
+// ShiftSupervisor derived class, inheriting from Employee base class:
+// Inherits Employee data and member functions and has two extra data member for salary and bonus
+// showStaticBinding() function redefines the base class showStaticBinding() and displays a new message
+// showValues function overrides the base class showVaules() function when used with a polymorphic call
 
 class ShiftSupervisor : public Employee
 {
@@ -25,8 +28,8 @@ public:
 		bonusYear = 0.0;
 	}
 
-												
-	// Constructor overload 2, calling Employee base class constructor overload 1 + new attributes
+
+	// Overloaded constructor, calling Employee base class's overload constructor and two new data members
 	ShiftSupervisor(string n, int id, string date, double sy, double by) : Employee(n, id, date)
 	{
 		salaryYear = sy;
@@ -43,7 +46,7 @@ public:
 	int getData();
 	void showStaticBinding();
 
-	// Redefined function from base class to display obeject's values (virtual)
+	// This function will override the base class showValues() function
 	virtual void showValues() override;
 
 
